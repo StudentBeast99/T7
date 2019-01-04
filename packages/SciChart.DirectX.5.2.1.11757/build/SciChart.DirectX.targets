@@ -1,0 +1,13 @@
+<!-- Copy SharpDX Effects native DLLs to output dir always on build https://stackoverflow.com/a/44879958/303612 --> 
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)sharpdx_direct3d11_1_effects_x64.dll">
+      <Link>sharpdx_direct3d11_1_effects_x64.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Include="$(MSBuildThisFileDirectory)sharpdx_direct3d11_1_effects_x86.dll">
+      <Link>sharpdx_direct3d11_1_effects_x86.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
